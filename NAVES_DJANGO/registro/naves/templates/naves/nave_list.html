@@ -20,8 +20,7 @@ placeholder="Buscar matrícula/nombre/armador">
 <ul>
  {% for nave in object_list %}
  <li>
- <a href="{% url 'naves:nave_detail' nave.pk %}">{{ nave.nombre
-}}</a>
+ <a href="{% url 'naves:nave_detail' nave.pk %}">{{ nave.nombre}}</a>
  [{{ nave.matricula }}] — {{ nave.armador.nombre }}
  {% if nave.cert_vigentes > 0 %}<strong>· Certificado
 vigente</strong>{% endif %}
