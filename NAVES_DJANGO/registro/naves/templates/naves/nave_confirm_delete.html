@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Eliminar nave</title>
+</head>
+<body>
+    <h1>Eliminar nave</h1>
+
+    <p>¿Estás seguro de que deseas eliminar la nave 
+       <strong>{{ object.nombre }} [{{ object.matricula }}]</strong>?</p>
+
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">✅ Sí, eliminar</button>
+        <a href="{% url 'naves:nave_detail' object.pk %}">❌ Cancelar</a>
+    </form>
+</body>
+</html>
